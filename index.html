@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Medical Treatment Planner</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+<a href="/">Home</a>
+<a href="/about">Problem</a>
+<a href="/ai">AI Technique</a>
+<a href="/network">Decision Network</a>
+</nav>
+
+<div class="container">
+
+<!-- Doctor image inside form -->
+<img src="{{ url_for('static', filename='doctor.png') }}" class="doctor">
+
+<h1>Medical Treatment Planner</h1>
+
+<div class="heartbeat"></div>
+
+<p>AI-based system using Bayesian reasoning</p>
+
+<form method="POST">
+
+<label>Fever (1 = Yes, 0 = No)</label>
+<input type="number" name="fever" min="0" max="1" required>
+
+<label>Cough (1 = Yes, 0 = No)</label>
+<input type="number" name="cough" min="0" max="1" required>
+
+<label>Fatigue (1 = Yes, 0 = No)</label>
+<input type="number" name="fatigue" min="0" max="1" required>
+
+<button type="submit">Predict</button>
+
+</form>
+
+{% if result %}
+
+<div class="result">
+
+<h3>Prediction: {{result}}</h3>
+<p><b>Confidence:</b> {{confidence}}</p>
+<p><b>Treatment:</b> {{treatment}}</p>
+
+</div>
+
+{% endif %}
+
+<h2>Tools Used</h2>
+
+<p>
+Python, Flask, HTML and CSS are used to build this AI-based
+medical treatment planner.
+</p>
+
+<div class="footer">
+This system is for educational purposes only.  
+Consult a doctor for professional medical advice.
+</div>
+
+</div>
+
+<script src="{{ url_for('static', filename='animation.js') }}"></script>
+
+</body>
+</html>
