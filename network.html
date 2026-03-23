@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Decision Network</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+<a href="/">Home</a>
+<a href="/about">Problem</a>
+<a href="/ai">AI Technique</a>
+<a href="/network">Decision Network</a>
+</nav>
+
+<div class="container">
+<h2>Decision Network Representation</h2>
+
+<div class="heartbeat"></div>
+
+<p>
+A decision network represents relationships between
+symptoms, diseases and treatment decisions.
+</p>
+
+<h3>Structure</h3>
+
+<p>
+Fever / Cough / Fatigue  
+↓  
+Disease Probability  
+↓  
+Treatment Plan
+</p>
+
+<p>
+Nodes represent symptoms and diseases,
+while the connections represent probabilistic relationships.
+This network helps the AI system choose the
+most suitable treatment plan.
+</p>
+
+</div>
+
+<!-- Animation JS -->
+<script src="{{ url_for('static', filename='animation.js') }}"></script>
+
+</body>
+</html>
