@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Problem</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+<a href="/">Home</a>
+<a href="/about">Problem</a>
+<a href="/ai">AI Technique</a>
+<a href="/network">Decision Network</a>
+</nav>
+
+<div class="container">
+
+<h2>Industry Problem Context</h2>
+
+<div class="heartbeat"></div>
+
+<p>
+In healthcare systems, doctors must analyze patient symptoms
+and determine the most appropriate treatment plan.
+Manual diagnosis can sometimes be time-consuming
+and may lead to incorrect decisions.
+</p>
+
+<p>
+AI systems can assist doctors by analyzing symptoms
+and estimating disease probability.
+This helps in faster and more accurate treatment planning.
+</p>
+
+<h2>Feasibility Study</h2>
+
+<p>
+The system uses probabilistic reasoning to analyze symptoms.
+It calculates the probability of diseases
+based on observed symptoms such as fever,
+cough and fatigue.
+</p>
+
+</div>
+
+<!-- Animation JS -->
+<script src="{{ url_for('static', filename='animation.js') }}"></script>
+
+</body>
+</html>
